@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Current Weather Application</title>
+	<meta charset="UTF-8" />
+  <link rel="stylesheet" href="/stylesheets/css/style.css">
+</head>
+
+<body>
+	<h1 class="top-header">Welcome to Weather App</h1>
+	<div class="searching-area">
+      <form action="/" method="post">
+        <div class="form-group">
+            <input class="form-control city-name" type="text" name="city"  placeholder="city" required />
+            <button class="btn">Get Current Weather!</button>
+        </div>
+      </form>
+	</div>
+	
+	<div class="content-area">
+        <table class="output">
+            <tr>
+                <th colspan="2" class="city-name"><%= city %>, <%= country %><br><%= time %></th>
+            </tr>
+            <tr>
+                <td width="50%">Temperature</td>
+                <td width="50%" class="temp"><%= currTemp %></td>
+            </tr>
+            <tr>
+                <td width="50%">Pressure</td>
+                <td width="50%" class="pressure"><%= currPressure %></td>
+            </tr>
+            <tr>
+                <td width="50%">Humidity</td>
+                <td width="50%" class="humidity"><%= currHumid %></td>
+            </tr>
+            <tr>
+                <td width="50%">Wind Speed</td>
+                <td width="50%" class="wind" style="letter-spacing: 2px;"><%= currWind %></td>
+            </tr>
+            <tr>
+                <td width="50%">Sunrise</td>
+                <td width="50%" class="humidity"><%= sunrise %></td>
+            </tr>
+            <tr>
+                <td width="50%">Sunset</td>
+                <td width="50%" class="wind" style="letter-spacing: 2px;"><%= sunset %></td>
+            </tr>
+        </table>
+	</div>
+
+    <script type="text/javascript" src="/stylesheets/js/script.js"></script>
+</body>
+
+</html>
